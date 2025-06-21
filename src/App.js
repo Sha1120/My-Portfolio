@@ -506,7 +506,7 @@ function App() {
               <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://sha1120.github.io/My-Portfolio/thank-you.html" />
-              <input type="text" name="_honeypot" style="display:none" />
+              <input type="text" name="_honeypot" style={{display:'none'}} />
               <button type="submit" className="submit-btn">SEND MESSAGE</button>
             </form>
 
