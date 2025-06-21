@@ -22,7 +22,11 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 150px;
+<<<<<<< HEAD
   margin-bottom : 50px;
+=======
+  margin-bottom: 50px;
+>>>>>>> e17ea7d (Updated App.js and App.css with new features/fixes)
 
 }
 
@@ -132,7 +136,11 @@ body {
 /* About section */
 
 .about {
+<<<<<<< HEAD
   margin-top: 150px;
+=======
+  margin-top: 140px;
+>>>>>>> e17ea7d (Updated App.js and App.css with new features/fixes)
 }
 
 .about-container {

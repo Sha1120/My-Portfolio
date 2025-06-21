@@ -505,7 +505,10 @@ function App() {
               <input type="text" name="subject" placeholder="Subject" />
               <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
               <input type="hidden" name="_captcha" value="false" />
+
               <input type="hidden" name="_redirect" value="https://sha1120.github.io/My-Portfolio/thank-you.html" />
+              <input type="hidden" name="_honeypot" />
+
               <button type="submit" className="submit-btn">SEND MESSAGE</button>
             </form>
 
