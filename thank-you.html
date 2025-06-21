@@ -5,21 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thank You</title>
-
-    <!-- SweetAlert2 CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script>
         window.onload = function () {
-            Swal.fire({
-                icon: 'success',
-                title: 'Message Sent!',
-                text: 'Your message was sent successfully!',
-                confirmButtonText: 'Go to Home',
-                confirmButtonColor: '#09dbf2'
-            }).then(() => {
-                window.location.href = "/My-Portfolio";
-            });
+            alert("✅ Message sent successfully!");
+            window.location.href = "/My-Portfolio"; // Redirect back to home after alert
         };
     </script>
 </head>
