@@ -115,7 +115,7 @@ function App() {
             </div>
           </div>
           <div className="right-side">
-            <img src="/img.jpg" alt="profile" className="profile-img" />
+            <img src={`${process.env.PUBLIC_URL}/img.jpg`} alt="profile" className="profile-img" />
           </div>
         </div>
       </section>
@@ -125,7 +125,7 @@ function App() {
         <div className="about-container">
 
           <div>
-            <img src="/img.jpg" alt="profile" className="about-profile-img" />
+            <img src={`${process.env.PUBLIC_URL}/img.jpg`} alt="profile" className="about-profile-img" />
           </div>
           <div className="about-text">
             <p>
@@ -143,7 +143,7 @@ function App() {
 
             <div className="project-links">
               <a
-                href="/softwareengineeringintern.pdf"
+                href={`${process.env.PUBLIC_URL}/softwareengineeringintern.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 className="modern-project-link"
@@ -390,7 +390,7 @@ function App() {
           <div className="project-item">
             <video
               className="project-video"
-              src="/videos/Online Auction System - Copy.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/Online Auction System - Copy.mp4`}
               controls
               loop
               muted
@@ -437,7 +437,7 @@ function App() {
           <div className="project-item">
             <video
               className="project-video"
-              src="/videos/Mobile Application Complete Video.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/Mobile Application Complete Video.mp4`}
               controls
               loop
               muted
@@ -505,7 +505,7 @@ function App() {
               <input type="text" name="subject" placeholder="Subject" />
               <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
+              <input type="hidden" name="_next" value="https://sha1120.github.io/My-Portfolio/thank-you.html" />
               <button type="submit" className="submit-btn">SEND MESSAGE</button>
             </form>
 
