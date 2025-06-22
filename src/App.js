@@ -5,11 +5,20 @@ import { VscVscode } from "react-icons/vsc";
 import { FaLocationDot, FaPhoneFlip } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { RiAccountCircleFill } from "react-icons/ri";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Header from "./Header";
 import "./App.css";
 
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+    });
+  }, []);
 
   const fullText1 = `This is a full-featured online auction platform built primarily with Java,
    using Hibernate for ORM, RESTful APIs for backend communication, 
@@ -72,6 +81,7 @@ function App() {
       return () => clearInterval(interval);
     }, [percent]);
 
+
     return (
       <div className="circle-skill-item">
         <div className="circle-progress">
@@ -120,12 +130,12 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="about">
+      <section id="about" className="about" data-aos="fade-right">
         <h2 className="heading"> About Me</h2>
         <div className="about-container">
 
-          <div>
-            <img src={`${process.env.PUBLIC_URL}/img.jpg`} alt="profile" className="about-profile-img" />
+          <div data-aos="zoom-in">
+            <img src={`${process.env.PUBLIC_URL}/img.jpg`} alt="profile" className="about-profile-img"  />
           </div>
           <div className="about-text">
             <p>
@@ -169,14 +179,14 @@ function App() {
         <h2 className="heading">My Skills</h2>
         <div className="skill-container">
 
-          <div className="technical-skills">
+          <div className="technical-skills" >
             <h3 className="category-name">Technical Skills</h3>
 
             <div className="skill-category">
               <h5> Programming Languages</h5>
               <div className="icon-container">
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaJava className="icon" />Java</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "95%" }}>
@@ -185,7 +195,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaJs className="icon" />JavaScript</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "80%" }}>
@@ -194,7 +204,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaDatabase className="icon" />SQL</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "87%" }}>
@@ -210,7 +220,7 @@ function App() {
               <h5>Frontend</h5>
               <div className="icon-container">
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaHtml5 className="icon" />HTML</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "98%" }}>
@@ -219,7 +229,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaCss3Alt className="icon" />CSS</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "90%" }}>
@@ -228,7 +238,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaReact className="icon" />React.js</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "79%" }}>
@@ -237,7 +247,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaBootstrap className="icon" />Boostrap</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "96%" }}>
@@ -252,7 +262,7 @@ function App() {
               <h5>Backend</h5>
               <div className="icon-container">
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiSpringboot className="icon" />Spring Boot</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "50%" }}>
@@ -261,7 +271,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaNodeJs className="icon" />Node.js</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "64%" }}>
@@ -270,7 +280,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><FaPhp className="icon" />PHP</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "78%" }}>
@@ -287,7 +297,7 @@ function App() {
 
               <div className="icon-container">
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiMysql className="icon" />MySQL</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "99%" }}>
@@ -296,7 +306,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiFirebase className="icon" />Firebase</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "80%" }}>
@@ -312,7 +322,7 @@ function App() {
 
               <div className="icon-container">
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiPostman className="icon" />Postman</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "70%" }}>
@@ -321,7 +331,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><VscVscode className="icon" />VS Code</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "90%" }}>
@@ -330,7 +340,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiApachenetbeanside className="icon" />NetBeans</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "90%" }}>
@@ -339,7 +349,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiIntellijidea className="icon" />Intellij IDEA</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "90%" }}>
@@ -348,7 +358,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiAndroidstudio className="icon" />Android Studio</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "80%" }}>
@@ -357,7 +367,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="skill-item">
+                <div className="skill-item" data-aos="fade-right">
                   <span className="skill-name"><SiApachejmeter className="icon" />JMeter</span>
                   <div className="progress-bar">
                     <div className="progress" style={{ "--bar-width": "75%" }}>
@@ -371,8 +381,8 @@ function App() {
 
           </div>
 
-          <div className="personal-skills">
-            <h3 className="category-name">Personal Skills</h3>
+          <div className="personal-skills" data-aos="fade-left">
+            <h3 className="category-name">Soft Skills</h3>
             <div className="personal-skill-item">
               {softSkills.map((skill, index) => (
                 <AnimatedSkill key={index} name={skill.name} percent={skill.percent} />
@@ -387,7 +397,7 @@ function App() {
         <h2 className="heading">My Projects</h2>
         <div className="project-container">
 
-          <div className="project-item">
+          <div className="project-item" data-aos="zoom-in">
             <video
               className="project-video"
               src={`${process.env.PUBLIC_URL}/videos/Online Auction System - Copy.mp4`}
@@ -434,7 +444,7 @@ function App() {
             </div>
           </div>
 
-          <div className="project-item">
+          <div className="project-item" data-aos="zoom-in">
             <video
               className="project-video"
               src={`${process.env.PUBLIC_URL}/videos/Mobile Application Complete Video.mp4`}
